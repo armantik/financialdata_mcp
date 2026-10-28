@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "financialdata-mcp"
+version = "0.1.0"
+description = "End-of-day market reports over MCP and CLI using FinancialData.net"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+dependencies = ["httpx[socks]>=0.28,<0.29", "tzdata>=2025.1", "pydantic>=2.11,<3", "mcp>=1.12,<2"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "pytest-asyncio>=1,<2", "ruff>=0.12,<1"]
+
+[project.scripts]
+financialdata-mcp = "financialdata_mcp.server:main"
+market-report = "financialdata_mcp.cli:main"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100

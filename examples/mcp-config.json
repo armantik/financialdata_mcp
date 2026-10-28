@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "financialdata": {
+      "command": "/absolute/path/to/financialdata_mcp/.venv/bin/financialdata-mcp",
+      "env": {
+        "FINANCIALDATA_CONFIG": "/absolute/path/to/financialdata_mcp/config.example.toml",
+        "FINANCIALDATA_DEMO": "true"
+      }
+    }
+  }
+}
