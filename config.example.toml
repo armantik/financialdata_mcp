@@ -1,0 +1,63 @@
+timezone = "Europe/Stockholm"
+timeout_seconds = 15
+max_attempts = 3
+stale_after_days = 4
+
+# Omit assets to use all seven built-in instruments.
+# If supplied, the assets array REPLACES the built-in list.
+# Verify symbols/units and subscription access with FinancialData.net before production.
+[[assets]]
+symbol = "AAPL"
+name = "Apple"
+kind = "stock"
+currency = "USD"
+unit = "USD/share"
+instrument = "equity"
+
+[[assets]]
+symbol = "MSFT"
+name = "Microsoft"
+kind = "stock"
+currency = "USD"
+unit = "USD/share"
+instrument = "equity"
+
+[[assets]]
+symbol = "^GSPC"
+name = "S&P 500"
+kind = "index"
+currency = "USD"
+unit = "points"
+instrument = "index"
+
+[[assets]]
+symbol = "^IXIC"
+name = "Nasdaq Composite"
+kind = "index"
+currency = "USD"
+unit = "points"
+instrument = "index"
+
+[[assets]]
+symbol = "GC"
+name = "Gold futures"
+kind = "commodity"
+currency = "USD"
+unit = "USD/troy oz"
+instrument = "futures"
+
+[[assets]]
+symbol = "SI"
+name = "Silver futures"
+kind = "commodity"
+currency = "USD"
+unit = "USD/troy oz"
+instrument = "futures"
+
+[[assets]]
+symbol = "CL"
+name = "WTI crude futures"
+kind = "commodity"
+currency = "USD"
+unit = "USD/barrel"
+instrument = "futures"
